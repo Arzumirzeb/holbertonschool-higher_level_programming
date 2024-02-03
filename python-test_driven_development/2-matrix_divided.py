@@ -2,13 +2,14 @@
 """Define function for divides all elements of a matrix"""
 
 
+matrixerror = "matrix must be a matrix (list of lists) of integers/floats"
 def matrix_divided(matrix, div):
     """Function that divides elemens of a matrix"""
     if not isinstance(matrix, (list)):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError(matrixerror)
     for row in matrix:
         if not all(isinstance(i, (int, float)) for i in row):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(matrixerror)
         if not len(row) == len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
     if not (isinstance(div, int) or isinstance(div, float)):
