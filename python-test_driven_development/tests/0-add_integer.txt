@@ -1,0 +1,40 @@
+=============================
+Test for ""0-add_integer.py""
+=============================
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(2)
+100
+
+>>> add_integer(5.7, 5)
+10
+
+>>> add_integer(7, -5)
+2
+
+>>> add_integer(17, 25)
+42
+
+>>> add_integer(10, "messi")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("messi", 10)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(17, float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(27, [0,1,2,3])
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
