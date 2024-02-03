@@ -2,9 +2,9 @@
 """Define function for divides all elements of a matrix"""
 
 
-matrixerror = "matrix must be a matrix (list of lists) of integers/floats"
 def matrix_divided(matrix, div):
     """Function that divides elemens of a matrix"""
+    matrixerror = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, (list)):
         raise TypeError(matrixerror)
     for row in matrix:
