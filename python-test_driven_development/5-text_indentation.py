@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Function for prints a text with 2 new lines after each of these characters: ., ? and :"""
+"""Function for prints a text with characters: ., ? and :"""
 
 
 def text_indentation(text):
@@ -9,5 +9,4 @@ def text_indentation(text):
 
     for char in ".:?":
         text = text.replace(char, char + "\n\n")
-    print("\n".join(l.strip() for l in text.split("\n")), end="")
-
+    print("\n".join(a.strip() for a in text.split("\n")), end="")
