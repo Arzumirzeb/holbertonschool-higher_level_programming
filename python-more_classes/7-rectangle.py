@@ -1,8 +1,8 @@
-#!/usr/bin/python3Change representation
+#!/usr/bin/python3
 """Rectangle class"""
 
 
-class Rectangle():
+class Rectangle:
     """Rectangle class"""
     number_of_instances = 0
     print_symbol = "#"
