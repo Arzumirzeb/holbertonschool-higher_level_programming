@@ -57,8 +57,6 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 >>> my_list.print_sorted()
 [1, 2, 7, 8]
 
->>> my_list.append(None)
->>> my_list.print_sorted()
+>>> my_list.print_sorted(1)
 Traceback (most recent call last):
-...
-TypeError: unorderable types: NoneType() < int()
+TypeError: print_sorted() takes 1 positional argument but 2 were given
