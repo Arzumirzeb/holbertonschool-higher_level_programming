@@ -1,0 +1,41 @@
+================
+MyList test file
+================
+
+ 
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+
+
+>>> print(my_list)
+[]
+
+>>> my_list = MyList([1, 2, 3])
+>>> print(my_list)
+[1, 2, 3]
+
+>>> my_list = MyList([1, 2], [3, 4])
+Traceback (most recent call last):
+...
+TypeError: list() takes at most 1 argument (2 given)
+
+>>> my_list = MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+
+>>> my_list = MyList()
+>>> my_list.append(7)
+>>> my_list.append(4)
+>>> my_list.append(5)
+>>> print(my_list)
+[7, 4, 5]
+
+>>> my_list[1] = 6
+>>> print(my_list)
+[7, 6, 5]
+
+
+>>> my_list.remove(6)
+>>> print(my_list)
+[7, 5]
