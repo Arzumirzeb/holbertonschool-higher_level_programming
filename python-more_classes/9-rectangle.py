@@ -60,6 +60,7 @@ class Rectangle():
         if rect_1.area() < rect_2.area():
             return rect_2
         return rect_1
+
     @classmethod
     def square(cls, size=0):
         """Rectangle with width and height equal to size"""
