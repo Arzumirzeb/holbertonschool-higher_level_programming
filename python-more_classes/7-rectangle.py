@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3Change representation
 """Rectangle class"""
 
 
@@ -9,9 +9,9 @@ class Rectangle():
 
     def __init__(self, width=0, height=0):
         """Define function for rectangle"""
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
