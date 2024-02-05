@@ -5,6 +5,7 @@ MyList test file
  
 >>> MyList = __import__('1-my_list').MyList
 >>> my_list = MyList()
+>>> type(my_list)
 
 
 >>> print(my_list)
