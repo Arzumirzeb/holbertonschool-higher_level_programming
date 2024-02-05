@@ -2,5 +2,6 @@
 """Class for rectangle"""
 
 
-class Rectangle:
+class Rectangle():
+    pass
     """defined Rectangle"""
