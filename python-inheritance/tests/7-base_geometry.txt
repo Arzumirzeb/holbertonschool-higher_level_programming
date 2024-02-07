@@ -32,7 +32,7 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 >>> bg.area()
 Traceback (most recent call last):
-	...
+...
 Exception: area() is not implemented
 
 >>> bg.integer_validator("height", [5])
@@ -43,12 +43,12 @@ TypeError: height must be an integer
 >>> bg.integer_validator("height", (1, 2))
 Traceback (most recent call last):
 ...
-TypeError: height must be an integer
+TypeError: name must be an integer
 
 >>> bg.integer_validator("height", True)
 Traceback (most recent call last):
 ...
-TypeError: height must be an integer
+TypeError: name must be an integer
 
 >>> bg.integer_validator("height", {1, 2})
 Traceback (most recent call last):
