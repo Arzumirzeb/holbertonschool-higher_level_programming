@@ -43,12 +43,12 @@ TypeError: height must be an integer
 >>> bg.integer_validator("height", (1, 2))
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: height must be an integer
 
 >>> bg.integer_validator("height", True)
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: height must be an integer
 
 >>> bg.integer_validator("height", {1, 2})
 Traceback (most recent call last):
