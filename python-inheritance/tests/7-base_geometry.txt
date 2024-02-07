@@ -7,19 +7,18 @@ Test for Integer validator
 
 
 >>> bg = BaseGeometry()
->>> type(bg)
 
 >>> bg.integer_validator("height", 10)
 
->>> bg.integer_validator("height", "weight")
+>>> bg.integer_validator("height", "width")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: height must be an integer
 
 >>> bg.integer_validator("height", -5)
 Traceback (most recent call last):
 ...
-ValueError: distance must be greater than 0
+ValueError: height must be greater than 0
 
 >>> bg.integer_validator("height")
 Traceback (most recent call last):
