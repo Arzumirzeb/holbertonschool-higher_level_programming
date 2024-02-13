@@ -23,8 +23,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Update square class"""
-        arguments = ["id", "size", "x", "y"]
         if args and len(args) != 0:
+            arguments = ["id", "size", "x", "y"]
             for i in range(len(args)):
                 setattr(self, arguments[i], args[i])
         else:
@@ -34,13 +34,13 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Dictionary of objects"""
         new = {
-                "id": self.id,
-                "size": self.width,
-                "height": self.height,
-                "x": self.x,
-                "y": self.y}
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y}
         return new
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}"\
+        return "[Square] ({}) {}/{} - {}/{}"\
             .format(self.id, self.x, self.y, self.size)
