@@ -120,7 +120,7 @@ class Rectangle(Base):
         new = {
             "id": self.id,
             "width": self.width,
-            "heigth": self.height,
+            "height": self.height,
             "x": self.x,
             "y": self.y}
         return new
