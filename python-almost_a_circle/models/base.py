@@ -42,8 +42,22 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """Static method that
-        that returns the list of the JSON string
+        returns the list of the JSON string
         representation json_string"""
         if json_string is None:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Class method that
+        returns an instance with all attributes already set"""
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        if cls is Rectangle:
+            new_instance = cls(1, 1)
+        elif cls is Square:
+            new_instance = cls(1)
+        new_instance.update(**dictionary)
+        return new_instance
