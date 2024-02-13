@@ -34,10 +34,10 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Dictionary of objects"""
         new = {
-                self.id = "id",
-                self.width = "size",
-                self.x = "x",
-                self.y = "y"}
+                "id": self.id,
+                "size": self.width,
+                "x": self.x,
+                "y": self.y}
         return new
 
     def __str__(self):
