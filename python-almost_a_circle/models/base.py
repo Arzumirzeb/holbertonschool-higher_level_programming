@@ -68,7 +68,7 @@ class Base:
         try:
             with open(f"{cls.__name__}".json, "r", encoding="utf-8") as f:
                 list_dict = cls.from_json_string(f.read())
-            for dictionary in list_dict:
-                return cls.create(**dictionary)
         except Exception:
             return []
+        for dictionary in list_dict:
+            return cls.create(**dictionary)
