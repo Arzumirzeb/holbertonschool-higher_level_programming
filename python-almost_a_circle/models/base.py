@@ -61,7 +61,7 @@ class Base:
             new_instance = cls(1)
         new_instance.update(**dictionary)
         return new_instance
- 
+
     @classmethod
     def load_from_file(cls):
         """Class method that returns a list of instances"""
