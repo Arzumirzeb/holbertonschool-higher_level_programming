@@ -35,12 +35,11 @@ class Square(Rectangle):
         """Dictionary of objects"""
         new = {
             "id": self.id,
-            "width": self.width,
-            "height": self.height,
+            "size": self.width,
             "x": self.x,
             "y": self.y}
         return new
 
     def __str__(self):
-        return "[Square] ({}) {}/{} - {}/{}"\
+        return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.size)
