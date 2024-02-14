@@ -48,4 +48,4 @@ class TestSquare(unittest.TestCase):
 
     def test_update(self):
         self.s4.update(2, 4, 7, 8)
-        self.assertEqual(str(self.s4), "[Rectangle] (8) 4/7 - 2")
+        self.assertEqual(str(self.s4), "[Square] (2) 7/8 - 4")
