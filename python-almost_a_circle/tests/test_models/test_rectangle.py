@@ -63,3 +63,11 @@ class TestRectangle(unittest.TestCase):
             self.r2.display()
             self.assertEqual(o.getvalue(), output)
 
+    def test_dictionary(self):
+        self.assertEqual(self.r4.to_dictionary(), {"width": 1, "height": 2, "x": 3, "y": 64, "id": 5})
+
+    def test_update(self):
+        self.r4.update(2, 4, 7, 8, 9)
+        self.assertEqual(str(self.r4), "[Rectangle] (2) 8/9 - 4/7")
+
+
