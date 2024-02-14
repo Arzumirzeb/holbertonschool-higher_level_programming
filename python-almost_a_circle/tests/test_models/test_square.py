@@ -40,3 +40,12 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             Square(0)
 
+    def test_str(self):
+        self.assertEqual(str(self.s4), "[Square] (4) 2/3 - 1")
+
+    def test_to_dictionary(self):
+        self.assertEqual(self.s4.to_dictionary(), {"id": 4, "size": 1, "x": 2, "y": 3})
+
+    def test_update(self):
+        self.s4.update(2, 4, 7, 8)
+        self.assertEqual(str(self.s4), "[Rectangle] (8) 4/7 - 2")
