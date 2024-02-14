@@ -16,6 +16,7 @@ class TestRectangle(unittest.TestCase):
         self.r4 = Rectangle(1, 2, 3, 64 ,5)
         self.new_dicts = {"id": 2, "width": 2, "height": 2, "x": 2, "y": 2}
         self.list_r1 = [self.r1]
+
     def test_checker(self):
         self.assertEqual(self.r1.width, 1)
         self.assertEqual(self.r2.height, 2)
