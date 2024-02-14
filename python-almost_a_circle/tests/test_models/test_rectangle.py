@@ -14,6 +14,8 @@ class TestRectangle(unittest.TestCase):
         self.r2 = Rectangle(1, 2, 3)
         self.r3 = Rectangle(7, 7, 7, 7)
         self.r4 = Rectangle(1, 2, 3, 64 ,5)
+        self.new_dicts = {"id": 2, "width": 2, "height": 2, "x": 2, "y": 2}
+        self.list_r1 = [self.r1]
     def test_checker(self):
         self.assertEqual(self.r1.width, 1)
         self.assertEqual(self.r2.height, 2)
@@ -70,4 +72,32 @@ class TestRectangle(unittest.TestCase):
         self.r4.update(2, 4, 7, 8, 9)
         self.assertEqual(str(self.r4), "[Rectangle] (2) 8/9 - 4/7")
 
+    def test_create(self):
+        new = Rectangle.create(**self.new_dicts)
+        self.assertEqual(str(new), "[Rectangle] (2) 2/2 - 2/2")
+    def test_save_to_file_case_1(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
+    
+    def test_save_to_file2(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), "[]")
 
+    def test_save_to_file3(self):
+        Rectangle.save_to_file([Rectangle(1, 2, id=1)])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual(f.read(), '[{"id": 1, "width": 1, "height": 2, "x": 0, "y": 0}]')
+    
+    def test_load_from(self):
+        self.assertEqual(Rectangle.load_from_file(), [])
+    
+        Rectangle.save_to_file(self.list_r1)
+        self.assertEqual(self.list_r1[0].__str__(), Rectangle.load_from_file()[0].__str__())
+
+    def tearDown(self):
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass 
