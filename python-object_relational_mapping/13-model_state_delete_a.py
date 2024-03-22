@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""deletes all State objects with a name 
-containing the letter a from the database hbtn_0e_6_usa"""
+"""deletes all State objects with a namecontaining
+the letter a from the database hbtn_0e_6_usa"""
 
 import sys
 from model_state import Base, State
