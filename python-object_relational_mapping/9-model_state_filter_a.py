@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""prints the first State object from the database hbtn_0e_6_usa"""
+"""lists all State objects that
+contain the letter a from the database hbtn_0e_6_usa"""
 
 import sys
 from model_state import Base, State
@@ -13,9 +14,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).order_by(State.id).first()
-    try:
-        print("{}: {}".format(state.id, state.name))
-    except Exception:
-        print("Nothing")
+    for state in session.query(State).order_by(State.id).all():
+        if "a" in state.name:
+            print("{}: {}".format(state.id, state.name))
     session.close()
